@@ -72,11 +72,6 @@ int main(int argc, char *argv[]) {
     exit(1);
   }
 
-  // is this necessary?
-  if (close(STDIN_FILENO) == -1) {
-    perror("close stdin");
-    exit(1);
-  }
   if (close(outputFd) == -1) {
     perror("close output file");
     exit(1);
